@@ -1,2 +1,73 @@
 When to use supervised learning
     You use supervised learning when you have historical data with labels and you want the model to learn a relationship between inputs and outputs so it can make predictions on new data.
+
+When to Use It
+Here are the main situations:
+
+1. When you already have labeled data
+    Your dataset contains input features and the correct output for each example.
+Example:
+    Medical records → (symptoms, test results) → disease diagnosis
+    Past sales → (ad spend, season) → revenue
+
+2. When your goal is prediction or classification
+    You want to predict future values (regression) or categorize items (classification).
+Example:
+    Predict stock prices (regression)
+    Identify if a transaction is fraudulent (classification)
+
+3. When patterns in data are stable
+    The relationship between input and output doesn’t change too fast over time.
+Example:
+    Predicting electricity usage based on weather (patterns remain fairly consistent)
+
+4. When you can afford labeling costs
+    Labeling might require human effort or experts (e.g., tagging images, transcribing audio).
+    If you have the resources to create or collect these labels, supervised learning is a good fit.
+
+When NOT to Use It
+    No labels available → use unsupervised learning instead.
+    Labels are extremely noisy/inaccurate → model will learn wrong patterns.
+    The problem is about exploring structure rather than making predictions.
+
+Rule of Thumb:
+    If you can phrase your problem as
+
+    "Given X, predict Y"
+    and you already have past examples of both X and Y, supervised learning is the right choice.
+
+
+Here’s a simple decision flowchart to help you decide if supervised learning is the right choice:
+          ┌──────────────────────────────┐
+          │ Do you have labeled data?     │
+          │ (Inputs + correct outputs)    │
+          └───────────────┬───────────────┘
+                          │ Yes
+                          ▼
+              ┌──────────────────────────────┐
+              │ Is your goal to predict       │
+              │ or classify something?        │
+              └───────────────┬───────────────┘
+                              │ Yes
+                              ▼
+                  ┌─────────────────────────┐
+                  │ Are the labels reliable  │
+                  │ and representative?      │
+                  └───────────┬──────────────┘
+                              │ Yes
+                              ▼
+                   ┌─────────────────────────┐
+                   │ Use SUPERVISED LEARNING │
+                   └─────────────────────────┘
+                              ▲
+                              │ No
+          ┌───────────────────┴───────────────────┐
+          │   Clean/Improve labels or consider    │
+          │   other approaches (semi-supervised)  │
+          └──────────────────────────────────────┘
+
+Example Applications
+    YES (Supervised Learning) → Predict next month’s sales from past sales & marketing spend.
+    NO (Try Unsupervised Learning) → Group customers by behavior when no purchase history labels exist.
+    MAYBE (Semi-supervised) → You have some labeled emails (spam/ham) but mostly unlabeled ones.
+
