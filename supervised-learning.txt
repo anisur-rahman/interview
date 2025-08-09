@@ -1,0 +1,2 @@
+When to use supervised learning
+    You use supervised learning when you have historical data with labels and you want the model to learn a relationship between inputs and outputs so it can make predictions on new data.
